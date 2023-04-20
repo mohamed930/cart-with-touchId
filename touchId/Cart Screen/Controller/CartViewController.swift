@@ -131,7 +131,39 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
         return 118.0
     }
     
+    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+        let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash.fill"), attributes: .destructive) {  action in
+            // Handle delete action
+            print("Deleted")
+        }
+        
+        let editAction = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) {  action in
+            // Handle edit action
+            print("Edited")
+        }
+        
+        // Create a custom view for the action
+        let editView = UIView()
+        editView.backgroundColor = .red
+        editView.layer.cornerRadius = editView.bounds.width / 2.0
+        editAction.setValue(editView, forKey: "contentView")
+        
+        let menu = UIMenu(title: "", children: [editAction, deleteAction])
+        
+        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { actions -> UIMenu? in
+            return menu
+        }
+        
+        return configuration
+    }
     
-
+    func tableView(_ tableView: UITableView,
+                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
 }
 
