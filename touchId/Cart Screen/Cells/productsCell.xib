@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SFPRODISPLAYBOLD.OTF">
+            <string>SFProDisplay-Bold</string>
+        </array>
         <array key="SFPRODISPLAYMEDIUM.OTF">
             <string>SFProDisplay-Medium</string>
         </array>
@@ -48,10 +51,43 @@
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hM-6U-Pr6">
                         <rect key="frame" x="270" y="83" width="52" height="20"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gxN-XB-5VF">
+                                <rect key="frame" x="0.0" y="0.0" width="52" height="20"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-dM-5WI">
+                                        <rect key="frame" x="0.0" y="0.0" width="17.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Slm-Gt-SPN">
+                                        <rect key="frame" x="17.5" y="0.0" width="17" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gy1-vg-A4T">
+                                        <rect key="frame" x="34.5" y="0.0" width="17.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="10"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="+">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.83529411760000005" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="gxN-XB-5VF" firstAttribute="top" secondItem="6hM-6U-Pr6" secondAttribute="top" id="6s8-ZQ-Jkw"/>
                             <constraint firstAttribute="height" constant="20" id="7yL-ZR-BEs"/>
                             <constraint firstAttribute="width" constant="52" id="AOX-3f-EDy"/>
+                            <constraint firstAttribute="trailing" secondItem="gxN-XB-5VF" secondAttribute="trailing" id="NOI-TQ-Xag"/>
+                            <constraint firstItem="gxN-XB-5VF" firstAttribute="leading" secondItem="6hM-6U-Pr6" secondAttribute="leading" id="WWI-fb-jO9"/>
+                            <constraint firstAttribute="bottom" secondItem="gxN-XB-5VF" secondAttribute="bottom" id="dbs-uJ-918"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,6 +105,9 @@
             <connections>
                 <outlet property="backgroundView" destination="H2p-sc-9uM" id="ae1-ru-7j7"/>
                 <outlet property="countView" destination="6hM-6U-Pr6" id="6xs-9A-6Ns"/>
+                <outlet property="minusButton" destination="FH4-dM-5WI" id="MBl-gf-FFr"/>
+                <outlet property="plusButton" destination="Gy1-vg-A4T" id="ESL-hf-g48"/>
+                <outlet property="productCount" destination="Slm-Gt-SPN" id="P39-Pn-DOg"/>
                 <outlet property="productImageView" destination="Qb2-9v-u49" id="0jS-Fw-cJz"/>
                 <outlet property="productNameLabel" destination="buP-Ry-pEv" id="ll6-tH-jOb"/>
                 <outlet property="productPriceLabel" destination="x1m-uP-ZyZ" id="8Tv-nl-uuY"/>

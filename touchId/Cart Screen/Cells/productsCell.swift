@@ -39,6 +39,6 @@ class productsCell: UITableViewCell {
         productImageView.image = UIImage(named: productmodel.productImageName)
         productNameLabel.text = productmodel.productName
         productPriceLabel.text = "#\(productmodel.productPrice)"
-//        productCount.text = "\(productmodel.productCount)"
+        productCount.text = "\(productmodel.productCount)"
     }
 }

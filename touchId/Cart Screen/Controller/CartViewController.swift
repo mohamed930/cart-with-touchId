@@ -34,6 +34,41 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
         
     }
     
+    @objc func incrementproudct (_ sender: UIButton) {
+        MakeUIAction(tag: sender.tag, operation: "+")
+    }
+    
+    @objc func decrementproduct (_ sender: UIButton) {
+        MakeUIAction(tag: sender.tag, operation: "-")
+    }
+    
+    private func MakeUIAction(tag: Int,operation: Character) {
+        // update the product price.
+        let productprice = cartArray[tag].productPrice / cartArray[tag].productCount
+        
+        if operation == "+" {
+            // update the UI with one product added
+            cartArray[tag].productCount += 1
+            // update the new product price to UI
+            cartArray[tag].productPrice += productprice
+        }
+        else {
+            // update the prouct count in UI if the product is one do no thing.
+            if cartArray[tag].productCount == 1 {
+                cartArray[tag].productCount = 1
+            }
+            else {
+                cartArray[tag].productCount -= 1
+            }
+            
+            // update the product price in UI.
+            cartArray[tag].productPrice = productprice * cartArray[tag].productCount
+            
+        }
+        
+        productsTableView.reloadData()
+    }
+    
     func LoadData() {
         var product = cartModel(productId: 1, productImageName: "image 2", productName: "Veggie tomato mix", productPrice: 1900, productCount: 1)
         cartArray.append(product)
@@ -77,7 +112,17 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: productsCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! productsCell
         
-        cell.ConfigureCell(cartArray[indexPath.row])
+        cell.ConfigureCell(cartArray[indexPath.section])
+        
+        cell.plusButton.tag = indexPath.section
+        cell.plusButton.addTarget(self,
+        action: #selector(incrementproudct),
+        for: .touchUpInside)
+        
+        cell.minusButton.tag = indexPath.section
+        cell.minusButton.addTarget(self,
+        action: #selector(decrementproduct),
+        for: .touchUpInside)
         
         return cell
     }
