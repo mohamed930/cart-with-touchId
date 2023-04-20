@@ -56,15 +56,71 @@
 		D3F4090729F15159004B389F /* touchId */ = {
 			isa = PBXGroup;
 			children = (
-				D3F4090829F15159004B389F /* AppDelegate.swift */,
-				D3F4090A29F15159004B389F /* SceneDelegate.swift */,
-				D3F4090C29F15159004B389F /* ViewController.swift */,
-				D3F4090E29F15159004B389F /* Main.storyboard */,
-				D3F4091129F1515B004B389F /* Assets.xcassets */,
-				D3F4091329F1515B004B389F /* LaunchScreen.storyboard */,
-				D3F4091629F1515B004B389F /* Info.plist */,
+				D3F4091C29F15187004B389F /* AppDelegate */,
+				D3F4092029F151B2004B389F /* launch screen */,
+				D3F4092229F151CE004B389F /* Models */,
+				D3F4091D29F15193004B389F /* Cart Screen */,
+				D3F4092129F151C2004B389F /* Assists */,
 			);
 			path = touchId;
+			sourceTree = "<group>";
+		};
+		D3F4091C29F15187004B389F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4090829F15159004B389F /* AppDelegate.swift */,
+				D3F4090A29F15159004B389F /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		D3F4091D29F15193004B389F /* Cart Screen */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4091E29F151A0004B389F /* Controller */,
+				D3F4091F29F151AC004B389F /* Views */,
+			);
+			path = "Cart Screen";
+			sourceTree = "<group>";
+		};
+		D3F4091E29F151A0004B389F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4090C29F15159004B389F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3F4091F29F151AC004B389F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4090E29F15159004B389F /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3F4092029F151B2004B389F /* launch screen */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4091329F1515B004B389F /* LaunchScreen.storyboard */,
+			);
+			path = "launch screen";
+			sourceTree = "<group>";
+		};
+		D3F4092129F151C2004B389F /* Assists */ = {
+			isa = PBXGroup;
+			children = (
+				D3F4091129F1515B004B389F /* Assets.xcassets */,
+				D3F4091629F1515B004B389F /* Info.plist */,
+			);
+			path = Assists;
+			sourceTree = "<group>";
+		};
+		D3F4092229F151CE004B389F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,12 +345,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4YZSY77G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = touchId/Info.plist;
+				INFOPLIST_FILE = touchId/Assists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +362,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +375,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4YZSY77G5;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = touchId/Info.plist;
+				INFOPLIST_FILE = touchId/Assists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
