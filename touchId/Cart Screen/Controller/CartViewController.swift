@@ -31,6 +31,16 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     }
     
     @IBAction func processedButtonAction (_ sender: Any) {
+        var total = 0
+        for i in cartArray {
+            total += i.productPrice
+        }
+        
+        let story = UIStoryboard(name: "CartView", bundle: nil)
+        let nextVc = story.instantiateViewController(withIdentifier: "checkcoutViewController") as! checkcoutViewController
+        nextVc.totalValue = total
+        nextVc.modalPresentationStyle = .fullScreen
+        self.present(nextVc, animated: true)
         
     }
     
@@ -131,7 +141,7 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
         return 118.0
     }
     
-    func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
+    /*func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
         let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash.fill"), attributes: .destructive) {  action in
             // Handle delete action
             print("Deleted")
@@ -164,6 +174,6 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-    }
+    }*/
 }
 
