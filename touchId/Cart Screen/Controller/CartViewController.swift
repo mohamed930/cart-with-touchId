@@ -12,7 +12,7 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     @IBOutlet weak var productsTableView:UITableView!
     @IBOutlet weak var processedButton:UIButton!
     
-    let buttonRadiousValue = 0.125
+    let buttonRadiousValue = 0.1024
     let nibFileName    = "productsCell"
     let cellIdentifier = "Cell"
     let cellSperatorHight = 5.0

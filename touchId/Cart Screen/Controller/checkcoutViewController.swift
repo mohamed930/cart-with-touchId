@@ -49,32 +49,33 @@ class checkcoutViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
+    @IBAction func processedToAddressButtonAction(_ sender: Any) {
+        let story = UIStoryboard(name: "CartView", bundle: nil)
+        let nextVc = story.instantiateViewController(withIdentifier: "addressViewController") as! addressViewController
+        nextVc.totalPrice = totalValue
+        let orderAddressDetails = addressModel(orderAddressName: "Mohamed Ali", orderAddress: "masaken Elmoalmean Emart Qasem Entance B Floor one behind resturant wadde3 street 25 cairo Egypt", ownerTelephone: "+201273455681")
+        nextVc.orderAddressDetais = orderAddressDetails
+        nextVc.modalPresentationStyle = .fullScreen
+        present(nextVc, animated: true)
+    }
+    
     @IBAction func SetRadioButtonAction (_ sender: UIButton) {
         if sender.tag == 1 {
-            SetRadioButtonSelectedInUI(buttonName: cardRadiou, sender: sender)
+            cardRadiou.SetRadioButtonSelectedInUI()
             bankRadio.isSelected = false
         }
         else if sender.tag == 2 {
-            SetRadioButtonSelectedInUI(buttonName: bankRadio, sender: sender)
+            bankRadio.SetRadioButtonSelectedInUI()
             cardRadiou.isSelected = false
         }
         
         if sender.tag == 3 {
-            SetRadioButtonSelectedInUI(buttonName: DoorDeleivery, sender: sender)
+            DoorDeleivery.SetRadioButtonSelectedInUI()
             pickupDeleivery.isSelected = false
         }
         else if sender.tag == 4 {
-            SetRadioButtonSelectedInUI(buttonName: pickupDeleivery, sender: sender)
+            pickupDeleivery.SetRadioButtonSelectedInUI()
             DoorDeleivery.isSelected = false
-        }
-    }
-    
-    private func SetRadioButtonSelectedInUI(buttonName: UIButton, sender: UIButton) {
-        if sender.isSelected {
-            buttonName.isSelected = false
-        }
-        else {
-            buttonName.isSelected = true
         }
     }
 
