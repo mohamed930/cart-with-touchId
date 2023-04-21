@@ -25,13 +25,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3T-n5-flh">
-                    <rect key="frame" x="25" y="21.5" width="303" height="303"/>
+                    <rect key="frame" x="30" y="26.5" width="293" height="293"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAw-JJ-QBP">
-                            <rect key="frame" x="0.0" y="0.0" width="303" height="69"/>
+                            <rect key="frame" x="0.0" y="0.0" width="293" height="69"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlt-qz-vqv">
-                                    <rect key="frame" x="42" y="22" width="253" height="24"/>
+                                    <rect key="frame" x="42" y="22" width="243" height="24"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -46,14 +46,14 @@
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IC8-r4-Vmk">
-                            <rect key="frame" x="0.0" y="77" width="303" height="147"/>
+                            <rect key="frame" x="0.0" y="77" width="293" height="109"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </tableView>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lne-6h-dHr">
-                            <rect key="frame" x="25" y="245" width="253" height="50"/>
+                            <rect key="frame" x="25" y="207" width="243" height="66"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxO-qY-sBK">
-                                    <rect key="frame" x="0.0" y="0.0" width="119" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="114" height="66"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Cancel">
@@ -64,7 +64,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btE-Pd-9h4">
-                                    <rect key="frame" x="119" y="0.0" width="134" height="50"/>
+                                    <rect key="frame" x="114" y="0.0" width="129" height="66"/>
                                     <color key="backgroundColor" red="0.83529411760000005" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="17"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -78,7 +78,7 @@
                             </subviews>
                             <constraints>
                                 <constraint firstItem="hxO-qY-sBK" firstAttribute="width" secondItem="lne-6h-dHr" secondAttribute="width" multiplier="0.47:1" id="R4Z-gW-ojo"/>
-                                <constraint firstAttribute="height" constant="50" id="qdu-02-Hjy"/>
+                                <constraint firstAttribute="height" constant="66" id="qdu-02-Hjy"/>
                             </constraints>
                         </stackView>
                     </subviews>
@@ -93,7 +93,7 @@
                         <constraint firstItem="lne-6h-dHr" firstAttribute="top" secondItem="IC8-r4-Vmk" secondAttribute="bottom" constant="21" id="gET-Qh-fZd"/>
                         <constraint firstItem="lne-6h-dHr" firstAttribute="leading" secondItem="a3T-n5-flh" secondAttribute="leading" constant="25" id="obh-MN-B3E"/>
                         <constraint firstItem="IC8-r4-Vmk" firstAttribute="top" secondItem="mAw-JJ-QBP" secondAttribute="bottom" constant="8" symbolic="YES" id="pSQ-Db-U0S"/>
-                        <constraint firstAttribute="bottom" secondItem="lne-6h-dHr" secondAttribute="bottom" constant="8" id="s33-c1-5gx"/>
+                        <constraint firstAttribute="bottom" secondItem="lne-6h-dHr" secondAttribute="bottom" constant="20" id="s33-c1-5gx"/>
                     </constraints>
                 </view>
             </subviews>
@@ -103,8 +103,8 @@
                 <constraint firstItem="a3T-n5-flh" firstAttribute="width" secondItem="a3T-n5-flh" secondAttribute="height" multiplier="1:1" id="4I5-7Y-PCW"/>
                 <constraint firstItem="a3T-n5-flh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IT4-5j-rA7"/>
                 <constraint firstItem="a3T-n5-flh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NuF-4R-sAh"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a3T-n5-flh" secondAttribute="trailing" constant="25" id="Yal-tB-lIV"/>
-                <constraint firstItem="a3T-n5-flh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="gV7-f7-bBc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="a3T-n5-flh" secondAttribute="trailing" constant="30" id="Yal-tB-lIV"/>
+                <constraint firstItem="a3T-n5-flh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="gV7-f7-bBc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

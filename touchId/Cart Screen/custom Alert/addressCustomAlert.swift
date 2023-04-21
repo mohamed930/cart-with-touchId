@@ -21,7 +21,7 @@ class addressCustomAlert: UIView {
     // MARK: - Properties
     var delegate: AlertViewDelegate?
     let cornderRadiousValue = 0.125
-    let buttonCornerRadious = 0.135
+    let buttonCornerRadious = 0.245
     
     class func instanceFromNib() -> addressCustomAlert {
         let view = UINib(nibName: "addressCustomAlert", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! addressCustomAlert
