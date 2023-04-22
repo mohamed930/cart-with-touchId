@@ -10,8 +10,9 @@
 		D356506F29F2A79A0034B387 /* addressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356506E29F2A79A0034B387 /* addressViewController.swift */; };
 		D356507129F2B0970034B387 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356507029F2B0970034B387 /* UIButton.swift */; };
 		D356507329F2B3160034B387 /* addressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356507229F2B3160034B387 /* addressModel.swift */; };
-		D356507A29F2BF150034B387 /* addressCustomAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = D356507929F2BF150034B387 /* addressCustomAlert.xib */; };
-		D356507C29F2CDDA0034B387 /* addressCustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356507B29F2CDDA0034B387 /* addressCustomAlert.swift */; };
+		D3AAE5A129F414D0005BB243 /* UIVViewController-SLPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */; };
+		D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */; };
+		D3AAE5A729F4153D005BB243 /* ListAddressPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */; };
 		D3D21CD729F19205003901FB /* checkcoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D21CD629F19205003901FB /* checkcoutViewController.swift */; };
 		D3F4090929F15159004B389F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4090829F15159004B389F /* AppDelegate.swift */; };
 		D3F4090B29F15159004B389F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4090A29F15159004B389F /* SceneDelegate.swift */; };
@@ -38,8 +39,9 @@
 		D356506E29F2A79A0034B387 /* addressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressViewController.swift; sourceTree = "<group>"; };
 		D356507029F2B0970034B387 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D356507229F2B3160034B387 /* addressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressModel.swift; sourceTree = "<group>"; };
-		D356507929F2BF150034B387 /* addressCustomAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = addressCustomAlert.xib; sourceTree = "<group>"; };
-		D356507B29F2CDDA0034B387 /* addressCustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressCustomAlert.swift; sourceTree = "<group>"; };
+		D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVViewController-SLPopup.swift"; sourceTree = "<group>"; };
+		D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddressPopupViewController.swift; sourceTree = "<group>"; };
+		D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListAddressPopupViewController.xib; sourceTree = "<group>"; };
 		D3D21CD629F19205003901FB /* checkcoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkcoutViewController.swift; sourceTree = "<group>"; };
 		D3F4090529F15159004B389F /* touchId.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchId.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F4090829F15159004B389F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,10 +80,18 @@
 		D356507429F2BD050034B387 /* custom Alert */ = {
 			isa = PBXGroup;
 			children = (
-				D356507929F2BF150034B387 /* addressCustomAlert.xib */,
-				D356507B29F2CDDA0034B387 /* addressCustomAlert.swift */,
+				D3AAE5A329F414F6005BB243 /* new */,
 			);
 			path = "custom Alert";
+			sourceTree = "<group>";
+		};
+		D3AAE5A329F414F6005BB243 /* new */ = {
+			isa = PBXGroup;
+			children = (
+				D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */,
+				D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */,
+			);
+			path = new;
 			sourceTree = "<group>";
 		};
 		D3F408FC29F15159004B389F = {
@@ -216,6 +226,7 @@
 			children = (
 				D3F4093D29F162E4004B389F /* UIView.swift */,
 				D356507029F2B0970034B387 /* UIButton.swift */,
+				D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */,
 			);
 			path = "Extensions + UICustoms";
 			sourceTree = "<group>";
@@ -282,13 +293,13 @@
 				D3F4093B29F15CA3004B389F /* productsCell.xib in Resources */,
 				D3F4093129F15483004B389F /* SFPRODISPLAYREGULAR.OTF in Resources */,
 				D3F4093529F15483004B389F /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
+				D3AAE5A729F4153D005BB243 /* ListAddressPopupViewController.xib in Resources */,
 				D3F4092E29F15483004B389F /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
 				D3F4093029F15483004B389F /* SFPRODISPLAYBLACKITALIC.OTF in Resources */,
 				D3F4091529F1515B004B389F /* LaunchScreen.storyboard in Resources */,
 				D3F4092F29F15483004B389F /* SFPRODISPLAYLIGHTITALIC.OTF in Resources */,
 				D3F4091229F1515B004B389F /* Assets.xcassets in Resources */,
 				D3F4093229F15483004B389F /* SFPRODISPLAYTHINITALIC.OTF in Resources */,
-				D356507A29F2BF150034B387 /* addressCustomAlert.xib in Resources */,
 				D3F4092D29F15483004B389F /* SFPRODISPLAYSEMIBOLDITALIC.OTF in Resources */,
 				D3F4093329F15483004B389F /* SFPRODISPLAYBOLD.OTF in Resources */,
 				D3F4091029F15159004B389F /* CartView.storyboard in Resources */,
@@ -308,10 +319,11 @@
 				D356506F29F2A79A0034B387 /* addressViewController.swift in Sources */,
 				D356507329F2B3160034B387 /* addressModel.swift in Sources */,
 				D3F4093A29F15CA3004B389F /* productsCell.swift in Sources */,
+				D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */,
 				D3F4090929F15159004B389F /* AppDelegate.swift in Sources */,
 				D3F4090B29F15159004B389F /* SceneDelegate.swift in Sources */,
 				D3D21CD729F19205003901FB /* checkcoutViewController.swift in Sources */,
-				D356507C29F2CDDA0034B387 /* addressCustomAlert.swift in Sources */,
+				D3AAE5A129F414D0005BB243 /* UIVViewController-SLPopup.swift in Sources */,
 				D356507129F2B0970034B387 /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
