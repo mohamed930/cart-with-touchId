@@ -13,6 +13,8 @@
 		D3AAE5A129F414D0005BB243 /* UIVViewController-SLPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */; };
 		D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */; };
 		D3AAE5A729F4153D005BB243 /* ListAddressPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */; };
+		D3AAE5AC29F42471005BB243 /* addressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5AA29F42471005BB243 /* addressCell.swift */; };
+		D3AAE5AD29F42471005BB243 /* addressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AAE5AB29F42471005BB243 /* addressCell.xib */; };
 		D3D21CD729F19205003901FB /* checkcoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D21CD629F19205003901FB /* checkcoutViewController.swift */; };
 		D3F4090929F15159004B389F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4090829F15159004B389F /* AppDelegate.swift */; };
 		D3F4090B29F15159004B389F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3F4090A29F15159004B389F /* SceneDelegate.swift */; };
@@ -42,6 +44,8 @@
 		D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVViewController-SLPopup.swift"; sourceTree = "<group>"; };
 		D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddressPopupViewController.swift; sourceTree = "<group>"; };
 		D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListAddressPopupViewController.xib; sourceTree = "<group>"; };
+		D3AAE5AA29F42471005BB243 /* addressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addressCell.swift; path = "touchId/Cart Screen/Cells/addressCell/addressCell.swift"; sourceTree = SOURCE_ROOT; };
+		D3AAE5AB29F42471005BB243 /* addressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = addressCell.xib; path = "touchId/Cart Screen/Cells/addressCell/addressCell.xib"; sourceTree = SOURCE_ROOT; };
 		D3D21CD629F19205003901FB /* checkcoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkcoutViewController.swift; sourceTree = "<group>"; };
 		D3F4090529F15159004B389F /* touchId.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = touchId.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3F4090829F15159004B389F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,18 +84,28 @@
 		D356507429F2BD050034B387 /* custom Alert */ = {
 			isa = PBXGroup;
 			children = (
-				D3AAE5A329F414F6005BB243 /* new */,
+				D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */,
+				D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */,
 			);
 			path = "custom Alert";
 			sourceTree = "<group>";
 		};
-		D3AAE5A329F414F6005BB243 /* new */ = {
+		D3AAE5A829F42406005BB243 /* productCell */ = {
 			isa = PBXGroup;
 			children = (
-				D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */,
-				D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */,
+				D3F4093829F15CA3004B389F /* productsCell.swift */,
+				D3F4093929F15CA3004B389F /* productsCell.xib */,
 			);
-			path = new;
+			path = productCell;
+			sourceTree = "<group>";
+		};
+		D3AAE5A929F42414005BB243 /* addressCell */ = {
+			isa = PBXGroup;
+			children = (
+				D3AAE5AA29F42471005BB243 /* addressCell.swift */,
+				D3AAE5AB29F42471005BB243 /* addressCell.xib */,
+			);
+			path = addressCell;
 			sourceTree = "<group>";
 		};
 		D3F408FC29F15159004B389F = {
@@ -215,8 +229,8 @@
 		D3F4093729F15C80004B389F /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D3F4093829F15CA3004B389F /* productsCell.swift */,
-				D3F4093929F15CA3004B389F /* productsCell.xib */,
+				D3AAE5A929F42414005BB243 /* addressCell */,
+				D3AAE5A829F42406005BB243 /* productCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -294,6 +308,7 @@
 				D3F4093129F15483004B389F /* SFPRODISPLAYREGULAR.OTF in Resources */,
 				D3F4093529F15483004B389F /* SFPRODISPLAYULTRALIGHTITALIC.OTF in Resources */,
 				D3AAE5A729F4153D005BB243 /* ListAddressPopupViewController.xib in Resources */,
+				D3AAE5AD29F42471005BB243 /* addressCell.xib in Resources */,
 				D3F4092E29F15483004B389F /* SFPRODISPLAYHEAVYITALIC.OTF in Resources */,
 				D3F4093029F15483004B389F /* SFPRODISPLAYBLACKITALIC.OTF in Resources */,
 				D3F4091529F1515B004B389F /* LaunchScreen.storyboard in Resources */,
@@ -319,6 +334,7 @@
 				D356506F29F2A79A0034B387 /* addressViewController.swift in Sources */,
 				D356507329F2B3160034B387 /* addressModel.swift in Sources */,
 				D3F4093A29F15CA3004B389F /* productsCell.swift in Sources */,
+				D3AAE5AC29F42471005BB243 /* addressCell.swift in Sources */,
 				D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */,
 				D3F4090929F15159004B389F /* AppDelegate.swift in Sources */,
 				D3F4090B29F15159004B389F /* SceneDelegate.swift in Sources */,

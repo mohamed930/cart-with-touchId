@@ -24,6 +24,7 @@ class addressViewController: UIViewController, PopupProtocol {
     let buttonCornerRadious = 0.1024
     let viewCornerRadious = 0.06
     var totalPrice: Int?
+    var deliverystatus: Bool?
     var orderAddressDetais: addressModel?
     
     override func viewDidLoad() {
@@ -50,7 +51,17 @@ class addressViewController: UIViewController, PopupProtocol {
         orderNameownerLabel.text = orderAddressDetais.orderAddressName
         orderAddressLabel.text   = orderAddressDetais.orderAddress
         orderTelephoneLabel.text = orderAddressDetais.ownerTelephone
+        
+        guard let deliverystatus = deliverystatus else {
+            return
+        }
 
+        if deliverystatus {
+            doorDeliveryRadioButton.isSelected = true
+        }
+        else {
+            pickupRadioButton.isSelected = true
+        }
     }
     
     @IBAction func backButtonAction(_ sender: Any) {
@@ -77,6 +88,14 @@ class addressViewController: UIViewController, PopupProtocol {
     
     func Back() {
         self.dismissPopupViewController(animationType: .Fade)
+    }
+    
+    func SendDataToMain(addressmodel: addressModel) {
+        self.dismissPopupViewController(animationType: .Fade)
+        
+        orderAddressLabel.text = addressmodel.orderAddress
+        orderNameownerLabel.text = addressmodel.orderAddressName
+        orderTelephoneLabel.text = addressmodel.ownerTelephone
     }
     
     @IBAction func processedToPaymentButtonAction(_ sender: Any) {

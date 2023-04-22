@@ -26,6 +26,7 @@ class checkcoutViewController: UIViewController {
     let buttonCornerRadious = 0.1024
     
     var totalValue: Int?
+    var deliverystatus = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,7 @@ class checkcoutViewController: UIViewController {
         nextVc.totalPrice = totalValue
         let orderAddressDetails = addressModel(orderAddressName: "Mohamed Ali", orderAddress: "masaken Elmoalmean Emart Qasem Entance B Floor one behind resturant wadde3 street 25 cairo Egypt", ownerTelephone: "+201273455681")
         nextVc.orderAddressDetais = orderAddressDetails
+        nextVc.deliverystatus = deliverystatus
         nextVc.modalPresentationStyle = .fullScreen
         present(nextVc, animated: true)
     }
@@ -72,10 +74,12 @@ class checkcoutViewController: UIViewController {
         if sender.tag == 3 {
             DoorDeleivery.SetRadioButtonSelectedInUI()
             pickupDeleivery.isSelected = false
+            deliverystatus = true
         }
         else if sender.tag == 4 {
             pickupDeleivery.SetRadioButtonSelectedInUI()
             DoorDeleivery.isSelected = false
+            deliverystatus = false
         }
     }
 
