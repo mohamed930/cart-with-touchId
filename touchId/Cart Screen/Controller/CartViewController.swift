@@ -15,7 +15,7 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     let buttonRadiousValue = 0.1024
     let nibFileName    = "productsCell"
     let cellIdentifier = "Cell"
-    let cellSperatorHight = 5.0
+    let cellSperatorHight = 15.0
     var cartArray = Array<cartModel>()
 
     override func viewDidLoad() {

@@ -99,7 +99,24 @@ class addressViewController: UIViewController, PopupProtocol {
     }
     
     @IBAction func processedToPaymentButtonAction(_ sender: Any) {
-        
+        localAuthentication.instance.ShowAuthentication { msg in
+            switch msg {
+                case "Success Authorization":
+                    print("Success")
+                    break
+                case "Faild in Authorization":
+                    DispatchQueue.main.async {
+                        let msg = messageModel(title: "Faild", message: "Please try again.", btnName: ["Dismiss"])
+                        self.ShowAlert(message: msg)
+                    }
+                    break
+                default:
+                    let msg = messageModel(title: "Permission Required", message: "Please grant Face ID permission to use this feature.", btnName: ["Cancel","Setting"])
+                
+                self.ShowAlert(message: msg)
+                    break
+            }
+        }
     }
 
 }

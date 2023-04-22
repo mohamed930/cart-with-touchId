@@ -432,7 +432,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="processedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jZO-or-QqT"/>
                                     <action selector="processedToAddressButtonAction:" destination="bc4-Uw-E8A" eventType="touchUpInside" id="405-Jz-cHs"/>
                                 </connections>
                             </button>
@@ -758,7 +757,6 @@ public road, effurun, delta state</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="processedButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tsE-sm-UZB"/>
                                     <action selector="processedToPaymentButtonAction:" destination="3QB-h2-xrh" eventType="touchUpInside" id="9rj-dP-Y0F"/>
                                 </connections>
                             </button>
