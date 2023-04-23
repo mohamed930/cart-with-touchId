@@ -11,6 +11,7 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     
     @IBOutlet weak var productsTableView:UITableView!
     @IBOutlet weak var processedButton:UIButton!
+    @IBOutlet weak var coverImageView:UIImageView!
     
     let buttonRadiousValue = 0.1024
     let nibFileName    = "productsCell"
@@ -29,6 +30,13 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     
     func ButtonUI() {
         processedButton.MakeCornerRadious(value: buttonRadiousValue)
+        
+        if empty {
+            cartArray.removeAll()
+            productsTableView.isHidden = true
+            coverImageView.isHidden    = false
+            processedButton.isHidden   = true
+        }
     }
     
     @IBAction func processedButtonAction (_ sender: Any) {

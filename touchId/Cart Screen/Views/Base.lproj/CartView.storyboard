@@ -88,23 +88,33 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ZeR-rf-RIh"/>
                                 </connections>
                             </tableView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noItem" translatesAutoresizingMaskIntoConstraints="NO" id="Gaw-yj-jde">
+                                <rect key="frame" x="37.666666666666657" y="296" width="300" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="230" id="H0r-SC-kAq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Page Background"/>
                         <constraints>
                             <constraint firstItem="14W-j1-RkY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6z9-zu-OVa"/>
                             <constraint firstItem="agg-eZ-OiT" firstAttribute="trailing" secondItem="UDJ-hb-ob6" secondAttribute="trailing" id="7na-nh-FYc"/>
-                            <constraint firstItem="agg-eZ-OiT" firstAttribute="top" secondItem="UDJ-hb-ob6" secondAttribute="bottom" constant="21" id="Dqv-72-166"/>
                             <constraint firstItem="14W-j1-RkY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="21" id="Dyr-19-hI6"/>
                             <constraint firstItem="S6y-9m-Hec" firstAttribute="top" secondItem="14W-j1-RkY" secondAttribute="bottom" constant="25" id="HAm-ql-O2L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="agg-eZ-OiT" secondAttribute="bottom" constant="23" id="WyM-Ca-BCe"/>
+                            <constraint firstItem="Gaw-yj-jde" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="b0g-LZ-uMF"/>
                             <constraint firstItem="agg-eZ-OiT" firstAttribute="leading" secondItem="UDJ-hb-ob6" secondAttribute="leading" id="cXG-0e-90j"/>
+                            <constraint firstItem="agg-eZ-OiT" firstAttribute="top" secondItem="UDJ-hb-ob6" secondAttribute="bottom" constant="21" id="jl9-oA-ycL"/>
                             <constraint firstItem="UDJ-hb-ob6" firstAttribute="top" secondItem="S6y-9m-Hec" secondAttribute="bottom" id="mbm-HY-yfV"/>
                             <constraint firstItem="S6y-9m-Hec" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mfG-Rq-qAO"/>
                             <constraint firstItem="UDJ-hb-ob6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rrM-WN-OsS"/>
+                            <constraint firstItem="Gaw-yj-jde" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8:1" id="wGA-fO-WkN"/>
+                            <constraint firstItem="Gaw-yj-jde" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yAR-8L-6RZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coverImageView" destination="Gaw-yj-jde" id="nOD-FK-uU9"/>
                         <outlet property="processedButton" destination="agg-eZ-OiT" id="bit-my-PYx"/>
                         <outlet property="productsTableView" destination="UDJ-hb-ob6" id="UZZ-ua-UXT"/>
                     </connections>
@@ -818,7 +828,7 @@ public road, effurun, delta state</string>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Back to home">
+                                <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -853,6 +863,7 @@ public road, effurun, delta state</string>
         <image name="Group 67" width="15" height="15"/>
         <image name="chevron-left" width="24" height="24"/>
         <image name="iwwa_swipe" width="512" height="512"/>
+        <image name="noItem" width="220" height="246"/>
         <image name="orderConfirmed" width="424" height="424"/>
         <namedColor name="Page Background">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
