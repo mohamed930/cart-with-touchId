@@ -10,6 +10,9 @@
 		D356506F29F2A79A0034B387 /* addressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356506E29F2A79A0034B387 /* addressViewController.swift */; };
 		D356507129F2B0970034B387 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356507029F2B0970034B387 /* UIButton.swift */; };
 		D356507329F2B3160034B387 /* addressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D356507229F2B3160034B387 /* addressModel.swift */; };
+		D39431E329F5CE08001248F5 /* imgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39431E229F5CE08001248F5 /* imgModel.swift */; };
+		D3A5507329F5707500724008 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5507229F5707500724008 /* UIImage.swift */; };
+		D3A5507529F5BB7B00724008 /* finishedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A5507429F5BB7B00724008 /* finishedViewController.swift */; };
 		D3AAE5A129F414D0005BB243 /* UIVViewController-SLPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */; };
 		D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */; };
 		D3AAE5A729F4153D005BB243 /* ListAddressPopupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */; };
@@ -43,6 +46,9 @@
 		D356506E29F2A79A0034B387 /* addressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressViewController.swift; sourceTree = "<group>"; };
 		D356507029F2B0970034B387 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		D356507229F2B3160034B387 /* addressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addressModel.swift; sourceTree = "<group>"; };
+		D39431E229F5CE08001248F5 /* imgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imgModel.swift; sourceTree = "<group>"; };
+		D3A5507229F5707500724008 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		D3A5507429F5BB7B00724008 /* finishedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finishedViewController.swift; sourceTree = "<group>"; };
 		D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVViewController-SLPopup.swift"; sourceTree = "<group>"; };
 		D3AAE5A429F4153D005BB243 /* ListAddressPopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddressPopupViewController.swift; sourceTree = "<group>"; };
 		D3AAE5A529F4153D005BB243 /* ListAddressPopupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListAddressPopupViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +172,7 @@
 				D3F4090C29F15159004B389F /* CartViewController.swift */,
 				D3D21CD629F19205003901FB /* checkcoutViewController.swift */,
 				D356506E29F2A79A0034B387 /* addressViewController.swift */,
+				D3A5507429F5BB7B00724008 /* finishedViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 				D3F4093F29F1650D004B389F /* cartModel.swift */,
 				D356507229F2B3160034B387 /* addressModel.swift */,
 				D3DA57FF29F4448F00C575D9 /* messageModel.swift */,
+				D39431E229F5CE08001248F5 /* imgModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				D3AAE5A029F414D0005BB243 /* UIVViewController-SLPopup.swift */,
 				D3DA57FB29F4417300C575D9 /* localAuthentication.swift */,
 				D3DA57FD29F4446200C575D9 /* UIViewController.swift */,
+				D3A5507229F5707500724008 /* UIImage.swift */,
 			);
 			path = "Extensions + UICustoms";
 			sourceTree = "<group>";
@@ -336,13 +345,16 @@
 			files = (
 				D3F4090D29F15159004B389F /* CartViewController.swift in Sources */,
 				D3F4094029F1650D004B389F /* cartModel.swift in Sources */,
+				D3A5507529F5BB7B00724008 /* finishedViewController.swift in Sources */,
 				D3F4093E29F162E4004B389F /* UIView.swift in Sources */,
 				D3DA580029F4448F00C575D9 /* messageModel.swift in Sources */,
 				D356506F29F2A79A0034B387 /* addressViewController.swift in Sources */,
 				D3DA57FC29F4417300C575D9 /* localAuthentication.swift in Sources */,
 				D356507329F2B3160034B387 /* addressModel.swift in Sources */,
 				D3F4093A29F15CA3004B389F /* productsCell.swift in Sources */,
+				D39431E329F5CE08001248F5 /* imgModel.swift in Sources */,
 				D3AAE5AC29F42471005BB243 /* addressCell.swift in Sources */,
+				D3A5507329F5707500724008 /* UIImage.swift in Sources */,
 				D3AAE5A629F4153D005BB243 /* ListAddressPopupViewController.swift in Sources */,
 				D3F4090929F15159004B389F /* AppDelegate.swift in Sources */,
 				D3D21CD729F19205003901FB /* checkcoutViewController.swift in Sources */,
@@ -505,7 +517,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -536,7 +548,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

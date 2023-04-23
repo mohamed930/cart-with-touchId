@@ -24,7 +24,7 @@
         <!--Cart View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CartViewController" customModule="touchId" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CartViewController" id="BYZ-38-t0r" customClass="CartViewController" customModule="touchId" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -764,7 +764,7 @@ public road, effurun, delta state</string>
                         <viewLayoutGuide key="safeArea" id="g8P-GP-NIU"/>
                         <color key="backgroundColor" name="Page Background"/>
                         <constraints>
-                            <constraint firstItem="g8P-GP-NIU" firstAttribute="bottom" secondItem="IOz-3A-peg" secondAttribute="bottom" constant="18.666666666666629" id="1nj-bM-VRh"/>
+                            <constraint firstItem="g8P-GP-NIU" firstAttribute="bottom" secondItem="IOz-3A-peg" secondAttribute="bottom" constant="18.670000000000002" id="1nj-bM-VRh"/>
                             <constraint firstItem="qZE-gt-9qp" firstAttribute="leading" secondItem="g8P-GP-NIU" secondAttribute="leading" constant="32" id="4Hu-Kt-ZXB"/>
                             <constraint firstItem="IOz-3A-peg" firstAttribute="top" secondItem="L8s-WT-a38" secondAttribute="bottom" constant="18" id="7mv-b3-ITi"/>
                             <constraint firstItem="qZE-gt-9qp" firstAttribute="centerY" secondItem="07h-dQ-sLv" secondAttribute="centerY" id="BxG-YL-jSd"/>
@@ -796,6 +796,55 @@ public road, effurun, delta state</string>
             </objects>
             <point key="canvasLocation" x="1429.5999999999999" y="68.7192118226601"/>
         </scene>
+        <!--Finished View Controller-->
+        <scene sceneID="HN8-Ed-JYT">
+            <objects>
+                <viewController storyboardIdentifier="finishedViewController" id="5vL-OK-kWv" customClass="finishedViewController" customModule="touchId" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pVL-tI-jvx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orderConfirmed" translatesAutoresizingMaskIntoConstraints="NO" id="vNu-Wj-7wy">
+                                <rect key="frame" x="28" y="246.66666666666666" width="319" height="318.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vNu-Wj-7wy" secondAttribute="height" multiplier="1:1" id="qsq-v7-rfC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Li-Fe-eg5">
+                                <rect key="frame" x="30" y="689.33333333333337" width="315" height="70"/>
+                                <color key="backgroundColor" red="0.83529411760000005" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3VO-ql-2wT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="17"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Back to home">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnCartPageViewController" destination="5vL-OK-kWv" eventType="touchUpInside" id="rIQ-li-XpG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QSy-kU-ZNN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2Li-Fe-eg5" firstAttribute="leading" secondItem="QSy-kU-ZNN" secondAttribute="leading" constant="30" id="BSw-EQ-j6L"/>
+                            <constraint firstItem="vNu-Wj-7wy" firstAttribute="centerY" secondItem="pVL-tI-jvx" secondAttribute="centerY" id="BUA-xF-wx2"/>
+                            <constraint firstItem="vNu-Wj-7wy" firstAttribute="centerX" secondItem="pVL-tI-jvx" secondAttribute="centerX" id="TPt-mt-cy4"/>
+                            <constraint firstItem="QSy-kU-ZNN" firstAttribute="bottom" secondItem="2Li-Fe-eg5" secondAttribute="bottom" constant="18.670000000000002" id="pbh-5H-2tR"/>
+                            <constraint firstItem="QSy-kU-ZNN" firstAttribute="trailing" secondItem="2Li-Fe-eg5" secondAttribute="trailing" constant="30" id="qn8-j6-fno"/>
+                            <constraint firstItem="vNu-Wj-7wy" firstAttribute="width" secondItem="pVL-tI-jvx" secondAttribute="width" multiplier="0.85:1" id="wgp-iU-ea8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="BackToHomeButton" destination="2Li-Fe-eg5" id="Opq-jd-eZj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtM-Ie-tVt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2173.5999999999999" y="69.458128078817737"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bank" width="61" height="61"/>
@@ -804,6 +853,7 @@ public road, effurun, delta state</string>
         <image name="Group 67" width="15" height="15"/>
         <image name="chevron-left" width="24" height="24"/>
         <image name="iwwa_swipe" width="512" height="512"/>
+        <image name="orderConfirmed" width="424" height="424"/>
         <namedColor name="Page Background">
             <color red="0.96100002527236938" green="0.96100002527236938" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

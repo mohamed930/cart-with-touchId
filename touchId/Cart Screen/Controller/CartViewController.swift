@@ -17,6 +17,7 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
     let cellIdentifier = "Cell"
     let cellSperatorHight = 15.0
     var cartArray = Array<cartModel>()
+    var empty: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -141,39 +142,53 @@ class CartViewController: UIViewController , UITableViewDataSource , UITableView
         return 118.0
     }
     
-    /*func tableView(_ tableView: UITableView, contextMenuConfigurationForRowAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration? {
-        let deleteAction = UIAction(title: "Delete", image: UIImage(systemName: "trash.fill"), attributes: .destructive) {  action in
-            // Handle delete action
-            print("Deleted")
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let favImg = imgModel(imgName: "love", width: 22, hight: 20)
+        let favouriteAction = AddAction(imgData: favImg) { _ in
+            print("favourite pressed!!")
         }
         
-        let editAction = UIAction(title: "Edit", image: UIImage(systemName: "pencil")) {  action in
-            // Handle edit action
-            print("Edited")
+        let trashImg = imgModel(imgName: "trash", width: 20, hight: 24)
+        let trashAction = AddAction(imgData: trashImg) { _ in
+            print("trash pressed!!")
         }
         
-        // Create a custom view for the action
-        let editView = UIView()
-        editView.backgroundColor = .red
-        editView.layer.cornerRadius = editView.bounds.width / 2.0
-        editAction.setValue(editView, forKey: "contentView")
-        
-        let menu = UIMenu(title: "", children: [editAction, deleteAction])
-        
-        let configuration = UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { actions -> UIMenu? in
-            return menu
-        }
-        
+        let configuration = UISwipeActionsConfiguration(actions: [trashAction,favouriteAction])
         return configuration
     }
     
-    func tableView(_ tableView: UITableView,
-                   editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .none
+    private func AddAction(imgData: imgModel, completion: @escaping (Bool) -> ()) -> UIContextualAction {
+        let action = UIContextualAction(style: .normal, title: nil) { (action, view, completionHandler)  in
+            completion(true)
+            completionHandler(true)
+        }
+
+        action.backgroundColor = UIColor(named: "Page Background")
+        
+        let button = UIButton(type: .system)
+        button.frame = CGRect(x: 0, y: 0, width: 70, height: 70)
+        button.layer.cornerRadius = 35
+        button.backgroundColor = .red
+        button.tintColor = .white
+        button.setImage(UIImage(named: imgData.imgName)?.resize(to: CGSize(width: imgData.width, height: imgData.hight)), for: .normal)
+
+        button.center = CGPoint(x: view.frame.size.width - button.frame.size.width/2 - 10, y: view.frame.size.height/2)
+        action.image = imageFromView(button)
+        
+        return action
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-    }*/
+    // Helper function to create an image from a view
+    private func imageFromView(_ view: UIView) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.isOpaque, 0.0)
+        defer { UIGraphicsEndImageContext() }
+        guard let context = UIGraphicsGetCurrentContext() else { return UIImage() }
+        view.layer.render(in: context)
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return UIImage() }
+        return image
+    }
+
 }
 

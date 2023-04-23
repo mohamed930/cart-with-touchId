@@ -102,7 +102,14 @@ class addressViewController: UIViewController, PopupProtocol {
         localAuthentication.instance.ShowAuthentication { msg in
             switch msg {
                 case "Success Authorization":
-                    print("Success")
+                DispatchQueue.main.async { [weak self]  in
+                    guard let self = self else { return }
+                    
+                    let story = UIStoryboard(name: "CartView", bundle: nil)
+                    let nextVc = story.instantiateViewController(withIdentifier: "finishedViewController") as! finishedViewController
+                    nextVc.modalPresentationStyle = .fullScreen
+                    self.present(nextVc, animated: true)
+                }
                     break
                 case "Faild in Authorization":
                     DispatchQueue.main.async {
